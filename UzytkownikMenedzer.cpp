@@ -61,11 +61,14 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
 {
      for (int i = 0; i < uzytkownicy. size(); i++)
      {
-         cout<< endl<<uzytkownicy[i].pobierzId();
-         cout<< endl<<uzytkownicy[i].pobierzLogin();
-         cout<<endl<<uzytkownicy[i].pobierzHaslo();
+         cout<<uzytkownicy[i].pobierzId()<<endl;
+         cout<<uzytkownicy[i].pobierzLogin()<<endl;
+         cout<<uzytkownicy[i].pobierzHaslo()<<endl;
      }
 
 }
 
-
+void UzytkownikMenedzer::wczytajUzytkownikowZPlkiu()
+{
+    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPlkiu();
+}

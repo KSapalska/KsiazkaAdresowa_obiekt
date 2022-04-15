@@ -1,6 +1,9 @@
 #include "KsiazkaAdresowa.h"
 
-
+KsiazkaAdresowa::KsiazkaAdresowa()
+{
+   uzytkownikMenedzer.wczytajUzytkownikowZPlkiu();
+}
 
 void KsiazkaAdresowa::rejestracjaUzytkownika()
 {
