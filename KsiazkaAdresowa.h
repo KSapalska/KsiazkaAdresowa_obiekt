@@ -12,7 +12,9 @@ class KsiazkaAdresowa
     UzytkownikMenedzer uzytkownikMenedzer;
 
      public:
-   KsiazkaAdresowa();
+   KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami){
+   uzytkownikMenedzer.wczytajUzytkownikowZPlkiu();
+   };
    void rejestracjaUzytkownika();
    void wypiszWszystkichUzytkownikow();
 
