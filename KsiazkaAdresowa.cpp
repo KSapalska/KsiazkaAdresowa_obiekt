@@ -37,3 +37,8 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
     adresatMenedzer.wyswietlWszystkichAdresatow();
 }
+
+void KsiazkaAdresowa::wczytajAdresatowZPliku()
+{
+    adresatMenedzer.wczytajAdresatowZPliku(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+}

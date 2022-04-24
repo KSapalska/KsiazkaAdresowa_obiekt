@@ -24,6 +24,7 @@ class KsiazkaAdresowa
    void wylogowanieUzytkownika();
    void dodajAdresata();
    void wyswietlWszystkichAdresatow();
+   void wczytajAdresatowZPliku();
 };
 
 #endif
