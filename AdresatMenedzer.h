@@ -10,9 +10,13 @@ class AdresatMenedzer
     int idOstatniegoAdresata;
     PlikZAdresatami plikZAdresatami;
 public:
-    AdresatMenedzer();
+    AdresatMenedzer(string nazwaPlikuZAdresatami);
     void dodajAdresata(int idZalogowanegoUzytkownika);
     Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika);
+    void wyswietlWszystkichAdresatow();
+    void wyswietlDaneAdresata(Adresat adresat);
+    void wczytajAdresatowZPliku(int idZalogowanegoUzytkownika);
+
 };
 
 #endif // ADRESATMENEGER_H
