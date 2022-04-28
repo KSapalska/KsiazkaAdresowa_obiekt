@@ -6,13 +6,19 @@
 
 class AdresatMenedzer
 {
+    const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     vector<Adresat> adresaci;
-    int idOstatniegoAdresata;
+   // int idOstatniegoAdresata;
     PlikZAdresatami plikZAdresatami;
 public:
-    AdresatMenedzer(string nazwaPlikuZAdresatami);
-    void dodajAdresata(int idZalogowanegoUzytkownika);
-    Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika);
+    AdresatMenedzer(string nazwaPlikuZAdresatami,int idZalogowanegoUzytkownika)
+        :plikZAdresatami(nazwaPlikuZAdresatami),ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
+    {
+        adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+    };
+    void dodajAdresata();
+    Adresat podajDaneNowegoAdresata();
+
     void wyswietlWszystkichAdresatow();
     void wyswietlDaneAdresata(Adresat adresat);
     void wczytajAdresatowZPliku(int idZalogowanegoUzytkownika);

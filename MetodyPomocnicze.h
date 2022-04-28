@@ -1,5 +1,5 @@
-#ifndef KSIAZKAADRESOWA_H
-#define KSIAZKAADRESOWA_H
+#ifndef METODYPOMOCNICZE_H
+#define METODYPOMOCNICZE_H
 
 #include <iostream>
 #include <sstream>
@@ -16,6 +16,7 @@ public:
     static string konwerjsaIntNaString(int liczba);
     static string wczytajLinie();
     static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+    static char wczytajZnak();
  };
 
  #endif

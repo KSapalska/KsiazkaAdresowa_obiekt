@@ -1,7 +1,9 @@
 #include "UzytkownikMenedzer.h"
+#include "MetodyPomocnicze.h"
 
 UzytkownikMenedzer::UzytkownikMenedzer(string nazwaPlikuZUzytkownikami):plikZUzytkownikami(nazwaPlikuZUzytkownikami)
 {
+    uzytkownicy=plikZUzytkownikami.wczytajUzytkownikowZPlkiu();
     idZalogowanegoUzytkownika=0;
 }
 
@@ -73,10 +75,6 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
 
 }
 
-void UzytkownikMenedzer::wczytajUzytkownikowZPlkiu()
-{
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPlkiu();
-}
 
 int UzytkownikMenedzer::logowanieUzytkownika()
 {
@@ -154,4 +152,13 @@ void UzytkownikMenedzer::wylogowanieUzytkownika()
 int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
     return idZalogowanegoUzytkownika;
+}
+
+bool UzytkownikMenedzer::czyUzytkownikJestZalogowany()
+{
+    if (idZalogowanegoUzytkownika>0)
+        return true;
+    else {
+        return false;
+    }
 }
