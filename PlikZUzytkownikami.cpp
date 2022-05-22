@@ -19,7 +19,7 @@ void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkowink)
         }
         else
         {
-            plikTekstowy  << liniaZDanymiUzytkownika<<endl ;
+            plikTekstowy  <<endl<< liniaZDanymiUzytkownika ;
         }
     }
     else
@@ -30,6 +30,7 @@ void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkowink)
 bool PlikZUzytkownikami::czyPlikJestPusty()
 {
     fstream plikTekstowy;
+    plikTekstowy.open(NAZWA_PLIKU_Z_UZYTKOWNIKAMI.c_str(), ios::app);
     plikTekstowy.seekg(0, ios::end);
     if (plikTekstowy.tellg() == 0)
         return true;

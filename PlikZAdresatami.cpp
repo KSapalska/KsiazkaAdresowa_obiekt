@@ -1,22 +1,22 @@
 #include "plikzadresatami.h"
 
-PlikZAdresatami::PlikZAdresatami(string NAZWAPLIKUZADRESATAMI):NAZWA_PLIKU_Z_ADRESATAMI(NAZWAPLIKUZADRESATAMI)
+/*PlikZAdresatami::PlikZAdresatami(string NAZWAPLIKUZADRESATAMI):NAZWA_PLIKU_Z_ADRESATAMI(NAZWAPLIKUZADRESATAMI)
 {
     idOstatniegoAdresata=0;
-}
+}*/
 
 bool PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
 {
-    string liniaZDanymiAdresata = "";
-       // fstream plikTekstowy;
+        string liniaZDanymiAdresata = "";
+        fstream plikTekstowy;
         plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::out | ios::app);
 
 
-        if (plikTekstowy.good() == true)
+        if (plikTekstowy.good() )
         {
             liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami(adresat);
 
-            if (czyPlikJestPusty() == true)
+            if (czyPlikJestPusty())
             {
                 plikTekstowy << liniaZDanymiAdresata;
             }
@@ -25,6 +25,7 @@ bool PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
                 plikTekstowy << endl << liniaZDanymiAdresata ;
             }
             plikTekstowy.close();
+            idOstatniegoAdresata++;
             return true;
         }
         else
@@ -49,6 +50,8 @@ string PlikZAdresatami::zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKresk
 bool PlikZAdresatami::czyPlikJestPusty()
 {
     fstream plikTekstowy;
+    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::app);
+
     plikTekstowy.seekg(0, ios::end);
     if (plikTekstowy.tellg() == 0)
         return true;
@@ -60,7 +63,7 @@ vector<Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(i
 {
     Adresat adresat;
     vector<Adresat> adresaci;
-    int idOstatniegoAdresata = 0;
+    //int idOstatniegoAdresata = 0;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     string daneOstaniegoAdresataWPliku = "";
     fstream plikTekstowy;
@@ -166,3 +169,9 @@ int PlikZAdresatami::pobierzIdOstatniegoAdresata()
 {
     return idOstatniegoAdresata;
 }
+
+void PlikZAdresatami::wczytajIdOstatniegoAdresata(int Id)
+{
+    idOstatniegoAdresata=Id;
+}
+

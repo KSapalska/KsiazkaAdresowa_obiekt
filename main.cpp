@@ -31,7 +31,7 @@ int main()
 {
     char wybierzOpcjeZMenuGlownego();
     char wybierzOpcjeZMenuUzytkownika();
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt","Adresat.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt","Adresaci.txt");
    char wybor;
    //int idZalogowanegoUzytkownika;
    while(true)
@@ -83,7 +83,7 @@ int main()
                // edytujAdresata(adresaci);
                 break;
             case '7':
-              //  zmianaHaslaZalogowanegoUzytkownika(uzytkownicy, idZalogowanegoUzytkownika);
+               ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
                 break;
             case '8':
                 ksiazkaAdresowa.wylogowanieUzytkownika();

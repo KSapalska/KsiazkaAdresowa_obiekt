@@ -17,6 +17,8 @@ void AdresatMenedzer::dodajAdresata()
     adresaci.push_back(adresat);
     if (plikZAdresatami.dopiszAdresataDoPliku(adresat))
         cout<<"Nowy Adresat zostal dodany "<<endl;
+        // idOstatniegoAdresata++;}
+
     else
         cout<<"Blad. Nie udalo sie dodac nowego adresata do pliku."<<endl;
 }
@@ -24,12 +26,12 @@ void AdresatMenedzer::dodajAdresata()
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
-    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata()+1);
+    adresat.ustawId((plikZAdresatami.pobierzIdOstatniegoAdresata()+1));
     adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
 
     cout << "Podaj imie: ";
-    cin.ignore();
+
         adresat.ustawImie(MetodyPomocnicze::wczytajLinie());
     adresat.ustawImie(MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.wczytajImie()));
 
