@@ -25,6 +25,8 @@ public:
     void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
+    int usunAdresata();
+    int podajIdWybranegoAdresata();
 
 };
 
