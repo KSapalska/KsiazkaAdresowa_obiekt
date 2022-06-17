@@ -128,7 +128,9 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
             system("pause");
         }
     }
-   // zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+
+
+              plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
 
 void UzytkownikMenedzer::wylogowanieUzytkownika()
@@ -162,4 +164,3 @@ bool UzytkownikMenedzer::czyUzytkownikJestZalogowany()
         return false;
     }
 }
-

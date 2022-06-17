@@ -27,6 +27,9 @@ public:
     void wyszukajAdresatowPoNazwisku();
     int usunAdresata();
     int podajIdWybranegoAdresata();
+    void edytujAdresata();
+    char wybierzOpcjeZMenuEdycja();
+    void zaktualizujDaneEdytowanegoAdresata(Adresat adresat);
 
 };
 
