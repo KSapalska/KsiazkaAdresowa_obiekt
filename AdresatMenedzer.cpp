@@ -168,7 +168,7 @@ int AdresatMenedzer::podajIdWybranegoAdresata()
 int AdresatMenedzer::usunAdresata()
 {
     int idUsuwanegoAdresata = 0;
-    int numerLiniiUsuwanegoAdresata = 0;
+
 
     system("cls");
     cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
@@ -214,7 +214,7 @@ void AdresatMenedzer::edytujAdresata()
     system("cls");
     Adresat adresat;
     int idEdytowanegoAdresata = 0;
-    int numerLiniiEdytowanegoAdresata = 0;
+
     string liniaZDanymiAdresata = "";
 
     cout << ">>> EDYCJA WYBRANEGO ADRESATA <<<" << endl << endl;
@@ -296,7 +296,7 @@ char AdresatMenedzer::wybierzOpcjeZMenuEdycja()
 
 void AdresatMenedzer::zaktualizujDaneEdytowanegoAdresata(Adresat adresat)
 {
-    int numerLiniiEdytowanegoAdresata = 0;
+
     string liniaZDanymiAdresata = "";
 
     plikZAdresatami.edytujAdresataWPliku(adresat);
