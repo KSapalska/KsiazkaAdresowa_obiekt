@@ -14,7 +14,7 @@ class PlikZAdresatami : public PlikTekstowy
     string NAZWA_PLIKU_Z_ADRESATAMI;
     int idOstatniegoAdresata;
    // fstream plikTekstowy;
-    bool czyPlikJestPusty();
+  //  bool czyPlikJestPusty();
     string zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami(Adresat adresat);
 public:
    // PlikZAdresatami(string NAZWAPLIKUZADRESATAMI);

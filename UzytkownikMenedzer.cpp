@@ -1,11 +1,11 @@
 #include "UzytkownikMenedzer.h"
 #include "MetodyPomocnicze.h"
 
-UzytkownikMenedzer::UzytkownikMenedzer(string nazwaPlikuZUzytkownikami):plikZUzytkownikami(nazwaPlikuZUzytkownikami)
+ /*UzytkownikMenedzer::UzytkownikMenedzer(string nazwaPlikuZUzytkownikami):plikZUzytkownikami(nazwaPlikuZUzytkownikami)
 {
     uzytkownicy=plikZUzytkownikami.wczytajUzytkownikowZPlkiu();
     idZalogowanegoUzytkownika=0;
-}
+}*/
 
 void UzytkownikMenedzer::rejestracjaUzytkownika()
 {
